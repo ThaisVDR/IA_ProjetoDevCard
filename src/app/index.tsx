@@ -9,7 +9,7 @@ export default function index() {
 
         <View style={styles.container}>
             <View style={styles.header}>
-                <Ionicons name="card" size={52} color="#5b89dd" />
+                <Ionicons name="card" size={52} color="#a458eb" />
                 <Text style={styles.h1}>DevCard</Text>
             </View>
             <View style={styles.subtitulo}>
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     h1: {
-        color: '#5b89dd',
+        color: '#a458eb',
         fontSize: 36,
         fontWeight: "bold",
         textAlign: "center",
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     button: {
-        backgroundColor: '#5b89dd',
+        backgroundColor: '#a458eb',
         padding: 19,
         borderRadius: 10,
         marginTop: 40,
