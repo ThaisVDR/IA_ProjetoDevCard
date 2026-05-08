@@ -192,11 +192,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     ativo: {
-        borderColor: '#7b42f5',
+        borderColor: '#5b89dd',
         backgroundColor: '#f0eaff',
     },
     btnSalvar: {
-        backgroundColor: '#7b42f5',
+        backgroundColor: '#5b89dd',
         padding: 15,
         borderRadius: 10,
         marginTop: 40,

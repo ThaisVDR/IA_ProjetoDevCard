@@ -9,15 +9,18 @@ export default function index() {
 
         <View style={styles.container}>
             <View style={styles.header}>
-                <Ionicons name="card" size={52} color="#985bdd" />
+                <Ionicons name="card" size={52} color="#5b89dd" />
                 <Text style={styles.h1}>DevCard</Text>
             </View>
             <View style={styles.subtitulo}>
-                <Text>Seu cartão de visita digital de dev mobile</Text>
+                <Text>Seu cartão de visita digital</Text>
             </View>
             <View style={styles.button}>
-                <TouchableOpacity onPress={() => router.push('/cadastro')}><Text style={styles.btnText}>Criar meu cartão</Text></TouchableOpacity >
+                <TouchableOpacity onPress={() => router.push('/cadastro')}>
+                    <Text style={styles.btnText}>Criar meu Cartão</Text>
+                </TouchableOpacity>
             </View>
+
         </View>
     );
 }
@@ -34,7 +37,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     h1: {
-        color: '#9271ebf3',
+        color: '#5b89dd',
         fontSize: 36,
         fontWeight: "bold",
         textAlign: "center",
@@ -46,15 +49,14 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     button: {
-        backgroundColor: '#9271eb',
-        padding: 20,
+        backgroundColor: '#5b89dd',
+        padding: 19,
         borderRadius: 10,
+        marginTop: 40,
         alignItems: 'center',
-        marginBottom: 15,
-        marginTop: 68
     },
     btnText: {
-        color: '#FFF',
+        color: 'white',
         fontWeight: 'bold',
         fontSize: 18,
     }

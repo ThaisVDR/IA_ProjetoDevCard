@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         marginBottom: 65,
     },
     btnRoxo: {
-        backgroundColor: '#7b42f5',
+        backgroundColor: '#5b89dd',
         width: '100%',
         padding: 15,
         borderRadius: 10,

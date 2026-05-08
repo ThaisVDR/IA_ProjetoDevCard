@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
     },
     btnVoltar: {
-        backgroundColor: '#9271eb',
+        backgroundColor: '#5b89dd',
         padding: 15,
         borderRadius: 10,
         alignItems: 'center',
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     btnFim: {
-        backgroundColor: '#9271eb',
+        backgroundColor: '#5b89dd',
         padding: 15,
         borderRadius: 10,
         alignItems: 'center',
