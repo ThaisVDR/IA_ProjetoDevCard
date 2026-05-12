@@ -1,79 +1,63 @@
-import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
+import { Button } from '../components/Button';
+import { THEME } from '../styles/contants';
+
 
 export default function Sucesso() {
     const router = useRouter();
-
     return (
-        <View style={styles.container}>
 
-            <View style={styles.icone}>
-                <Ionicons name="checkmark" size={60} color="white" />
+        <SafeAreaView>
+           <View style={styles.container}>
+            <View style={styles.header}>
+                <Text style={styles.titulo}>Cartão criado com sucesso!</Text>
+                <Text style={styles.subtitulo}>Seu cartão de visita digital está pronto. Compartilhe com a galera!</Text>
             </View>
 
-            <Text style={styles.texto}>Cartão criado com sucesso!</Text>
-            <Text style={styles.subtitulo}>
-                Seu cartão de visita digital está pronto.{"\n"}
-                Compartilhe com a galera!
-            </Text>
-            <TouchableOpacity
-                style={styles.btnRoxo}
-                onPress={() => router.replace('/cadastro')}
-            >
-                <Text style={styles.txtBranco}>Criar outro cartão</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.btnRoxo} onPress={() => router.replace('/')}>
-                <Text style={styles.txtBranco}>Voltar ao Início</Text>
-            </TouchableOpacity>
+            <View style={styles.footer}>
+           <Button label="Criar outro cartão" onPress={() => router.push('/cadastro')} />
+           <Button variant="secondary" label="Voltar ao início" onPress={() => router.push('/')} />
+            </View>
 
         </View>
+        </SafeAreaView>
+
+    
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 50,
+       flexDirection: 'column',
+       height: '100%',
+       justifyContent: 'center',
+       paddingHorizontal: 24,
     },
-    icone: {
-        width: 100,
-        height: 100,
-        borderRadius: 50,
-        backgroundColor: '#27ae60',
-        alignItems: 'center',
+    header: {
+        flexDirection: 'column',
         justifyContent: 'center',
-        marginBottom: 30,
+        alignItems: 'center',
+        height: 550,
+        gap: 12,
     },
-    texto: {
-        fontSize: 22,
+    titulo: {
+        fontSize: THEME.text.heading.h2,
+        color: THEME.colors.heading,
         fontWeight: 'bold',
-        color: '#258b17',
+        width: 200,
         textAlign: 'center',
-        marginBottom: 10,
     },
     subtitulo: {
-        fontSize: 14,
-        color: '#888',
-        textAlign: 'center',
-        marginBottom: 65,
-    },
-    btnRoxo: {
-        backgroundColor: '#a458eb',
-        width: '100%',
-        padding: 15,
-        borderRadius: 10,
-        alignItems: 'center',
-        marginBottom: 20,
-    },
-    txtBranco: {
-        color: '#fff',
-        fontWeight: 'bold',
         fontSize: 16,
-    }
+        color: THEME.colors.heading,
+        fontWeight: '400',
+        width: 200,
+        textAlign: 'center',
+    },
+    footer: {
+       flexDirection: 'column',
+       gap: 12,
+    },
 });

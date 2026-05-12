@@ -1,63 +1,52 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { StyleSheet, Text, View } from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import { THEME } from '../styles/contants';
+import { Button } from '../components/Button';
 
 
-export default function index() {
+export default function Home() {
     const router = useRouter();
     return (
 
-        <View style={styles.container}>
+        <SafeAreaView>
+           <View style={styles.container}>
             <View style={styles.header}>
-                <Ionicons name="card" size={52} color="#a458eb" />
-                <Text style={styles.h1}>DevCard</Text>
+                <Text style={styles.logo}>DevCard</Text>
+                <Text style={styles.subtitulo}>Seu cartão de visita digital de dev mobile</Text>
             </View>
-            <View style={styles.subtitulo}>
-                <Text>Seu cartão de visita digital</Text>
-            </View>
-            <View style={styles.button}>
-                <TouchableOpacity onPress={() => router.push('/cadastro')}>
-                    <Text style={styles.btnText}>Criar meu Cartão</Text>
-                </TouchableOpacity>
-            </View>
+           <Button label="Criar meu Cartão" onPress={() => router.push('/cadastro')} />
 
         </View>
+        </SafeAreaView>
+
+    
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+       flexDirection: 'column',
+       height: '100%',
+       justifyContent: 'center',
+       paddingHorizontal: 24,
     },
     header: {
+        flexDirection: 'column',
+        justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 10,
+        height: 550,
     },
-    h1: {
-        color: '#a458eb',
-        fontSize: 36,
-        fontWeight: "bold",
-        textAlign: "center",
+    logo: {
+        fontSize: 58,
+        color: THEME.colors.primary,
+        fontWeight: 'bold',
     },
     subtitulo: {
         fontSize: 16,
-        color: '#666',
+        color: THEME.colors.subtitle,
+        fontWeight: '400',
+        width: 200,
         textAlign: 'center',
-        marginBottom: 30,
     },
-    button: {
-        backgroundColor: '#a458eb',
-        padding: 19,
-        borderRadius: 10,
-        marginTop: 40,
-        alignItems: 'center',
-    },
-    btnText: {
-        color: 'white',
-        fontWeight: 'bold',
-        fontSize: 18,
-    }
 });
