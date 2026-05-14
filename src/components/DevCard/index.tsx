@@ -2,16 +2,11 @@ import { Text, View } from "react-native";
 import {styles} from "../DevCard/styles";
 
 type Props = {
-    devInfo: {
-        name: string;
-        role: string;
-        company: string;
-        experience: number;
-    }
+    devInfo: {}
 }
 
 
-export function DevCard({ devInfo }: Props) {
+export function DevCard() {
   return (
 
  <View style={styles.cardContainer}>

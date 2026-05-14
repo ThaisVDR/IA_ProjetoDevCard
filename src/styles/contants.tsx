@@ -20,6 +20,7 @@ export const THEME = {
       lg: BORDER_RADIUS_LG,
       xl: BORDER_RADIUS_XL,
       xxl: BORDER_RADIUS_XXL,
+
     },
   },
 

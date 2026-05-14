@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        height: 550,
+        height: 590,
     },
     logo: {
         fontSize: 58,
