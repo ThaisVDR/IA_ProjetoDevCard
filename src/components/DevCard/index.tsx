@@ -1,37 +1,45 @@
 import { Text, View } from "react-native";
-import {styles} from "../DevCard/styles";
+import { styles } from "./styles";
+import { Form } from "../../app/cadastro";
 
 type Props = {
-    devInfo: {}
-}
+  data: Form;
+};
 
-
-export function DevCard() {
+export function DevCard({ data }: Props) {
   return (
-
- <View style={styles.cardContainer}>
-          <View style={styles.cardAvatar}>
-            <View style={styles.cardAvatarSub}>
-              <Text style={styles.cardAvatarLetter}>T</Text>
-            </View>
-          </View>
-          <View style={styles.cardTituloGroup}>
-          <Text style={styles.cardTitulo}>Thais Vitoria</Text>
-         <View style={styles.cardTituloGroup}>
-          <Text style={styles.cardTexto}>Desenvolvedora</Text>
-          <Text style={styles.cardSubtitulo}>LogiTech</Text>
-         </View>
-          </View>
-          <View style={styles.cardSeparator} />
-          <View style={styles.cardTituloGroup}>
-          <Text style={styles.cardSubtitulo}>Especialista em</Text>
-          <Text style={styles.cardTituloRole}>Front-End</Text>
-          </View>
-          <View style={styles.cardBadge}>
-            <Text style={styles.cardBadgeTexto}>Especialista</Text>
-          </View>
-          <Text style={styles.cardSubtitulo}>12 anos de experiência</Text>
+    <View style={[styles.cardContainer, { backgroundColor: data.cardColor }]}>
+      <View style={styles.cardAvatarContainer}>
+        <View style={styles.cardAvatarSubContainer}>
+          <Text style={styles.cardAvatarLetter}>{data.fullName.charAt(0)}</Text>
         </View>
+      </View>
+
+      <View style={styles.cardTextGroup}>
+        <Text style={styles.cardTitle}>{data.fullName}</Text>
+        <View style={styles.cardTextGroup}>
+          <Text style={styles.cardText}>{data.role}</Text>
+          {data.company && (
+            <Text style={styles.cardSubtitle}>{data.company}</Text>
+          )}
+        </View>
+      </View>
+
+      <View style={styles.cardSeparator} />
+
+      <View style={styles.cardTextGroup}>
+        <Text style={styles.cardSubtitle}>Especialista em</Text>
+        <Text style={styles.cardRole}>{data.technology}</Text>
+      </View>
+
+      <View style={[styles.cardBadgeContainer, { marginTop: 8 }]}>
+        <Text style={styles.cardBadgeText}>Especialista</Text>
+      </View>
+
+      <Text style={styles.cardSubtitle}>
+        {" "}
+        {data.experience} anos de experiência
+      </Text>
+    </View>
   );
 }
-

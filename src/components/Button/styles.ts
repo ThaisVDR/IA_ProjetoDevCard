@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
 import { THEME } from "../../styles/contants";
+import { StyleSheet } from "react-native";
 
-export const stylePrimary = StyleSheet.create({
-  button: {
+const stylePrimary = StyleSheet.create({
+  buttonContainer: {
     backgroundColor: THEME.colors.primary,
     flexDirection: "row",
     justifyContent: "center",
@@ -11,31 +11,42 @@ export const stylePrimary = StyleSheet.create({
     paddingHorizontal: 24,
     borderRadius: THEME.border.radius.md,
   },
-  buttonTexto: {
-    color: THEME.colors.primary_froground,
-    fontWeight: "600",
-    fontSize: 18,
-  },
-  textSegundario: {
-    color: THEME.colors.primary_froground,
+
+  buttonText: {
+    color: THEME.colors.primary_foreground,
     fontWeight: "500",
     fontSize: 18,
   },
 });
 
-export const styleSecondary = StyleSheet.create({
-  button: {
-    ...stylePrimary.button,
+const styleSecondary = StyleSheet.create({
+  buttonContainer: {
+    ...stylePrimary.buttonContainer,
     backgroundColor: "transparent",
   },
-  buttonTexto: {
-    ...stylePrimary.buttonTexto,
+
+  buttonText: {
+    ...stylePrimary.buttonText,
     color: THEME.colors.primary,
   },
 });
 
-export const style ={
-    primary : stylePrimary,
-    secondary : styleSecondary,
-    outline : stylePrimary
-} as const
+const styleOutline = StyleSheet.create({
+  buttonContainer: {
+    ...stylePrimary.buttonContainer,
+    backgroundColor: "transparent",
+    borderColor: THEME.colors.primary,
+    borderWidth: 2,
+  },
+
+  buttonText: {
+    ...stylePrimary.buttonText,
+    color: THEME.colors.primary,
+  },
+});
+
+export const styles = {
+  primary: stylePrimary,
+  secondary: styleSecondary,
+  outline: styleOutline,
+} as const;

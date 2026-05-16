@@ -1,18 +1,30 @@
-import { TouchableOpacity, StyleSheet, Text } from "react-native";
-import { router } from "expo-router";
-import {style} from '../Button/styles';
+import { TouchableOpacity, Text, GestureResponderEvent } from "react-native";
+import { styles } from "./styles";
 
 type Props = {
-    label: string;
-    variant?: 'primary' | 'secondary' | 'outline';
-    onPress?: () => void;
-}
+  label: string;
+  disabled?: boolean;
+  variant?: "primary" | "secondary" | "outline";
+  onPress?: (event: GestureResponderEvent) => void;
+};
 
-
-export function Button({ label, variant = 'primary', onPress }: Props) {
-    return (
-        <TouchableOpacity style={style[variant].button} onPress={onPress}>
-            <Text style={style[variant].buttonTexto}>{label}</Text>
-        </TouchableOpacity>
-    );
+export function Button({
+  label,
+  variant = "primary",
+  onPress,
+  disabled = false,
+}: Props) {
+  function handleOnPress(event: GestureResponderEvent) {
+    if (!onPress) return;
+    if (disabled) return;
+    onPress(event);
+  }
+  return (
+    <TouchableOpacity
+      onPress={handleOnPress}
+      style={[styles[variant].buttonContainer, disabled && { opacity: 0.5 }]}
+    >
+      <Text style={styles[variant].buttonText}>{label}</Text>
+    </TouchableOpacity>
+  );
 }

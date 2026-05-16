@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
 import { THEME } from "../../styles/contants";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    cardContainer: {
+  cardContainer: {
     backgroundColor: "#3783f6",
     borderRadius: THEME.border.radius.xl,
     padding: 32,
@@ -11,63 +11,71 @@ export const styles = StyleSheet.create({
     gap: 12,
   },
 
-  cardAvatar: {
-    backgroundColor: "#a5c0e27f",
+  cardAvatarContainer: {
+    backgroundColor: "rgba(193, 220, 255, 0.4)",
     padding: 4,
     borderRadius: "100%",
   },
 
-  cardAvatarSub: {
+  cardAvatarSubContainer: {
     backgroundColor: "#f8fbff",
     borderRadius: "100%",
-    height: 100,
-    width: 100,
+    height: 80,
+    width: 80,
     justifyContent: "center",
     alignItems: "center",
   },
-cardAvatarLetter: {
+
+  cardAvatarLetter: {
+    color: "#3783f6",
     fontSize: THEME.text.heading.h2,
-    color: '#3783f6',
-    fontWeight: "bold",
-},
-  cardTitulo: {
-    fontSize: THEME.text.heading.h2,
-    color: '#f8fbff',
     fontWeight: "bold",
   },
-   cardTexto: {
+
+  cardTitle: {
+    color: "#f8fbff",
+    fontSize: THEME.text.heading.h2,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+
+  cardText: {
+    color: "#d5e5ff",
     fontSize: 16,
-    color: '#f8fbff',
   },
-  cardSubtitulo: {
-    fontSize: 12,
-    color: '#ffffff',
+
+  cardSubtitle: {
+    color: "#d5e5ff",
+    fontSize: 14,
   },
 
   cardSeparator: {
-    backgroundColor: '#ffffff',
-    width: 250,
+    backgroundColor: "rgba(248, 251, 255, 0.3)",
     height: 1,
-    marginVertical: 16,
+    width: 250,
+    marginVertical: 8,
   },
-  cardTituloRole:{
-   color: '#f8fbff',
+
+  cardRole: {
+    color: "#f8fbff",
     fontSize: THEME.text.heading.h4,
     fontWeight: "bold",
   },
-  cardBadge: {
-    backgroundColor: '#e6ba2b',
-    paddingHorizontal: 12,
+
+  cardBadgeContainer: {
+    backgroundColor: "#ffc124",
     paddingVertical: 8,
+    paddingHorizontal: 12,
     borderRadius: THEME.border.radius.xxl,
-    marginTop: 8,
   },
-  cardBadgeTexto: {
-    color: '#000000',
+
+  cardBadgeText: {
+    color: "#4c3600",
     fontWeight: "bold",
     letterSpacing: 1,
   },
-  cardTituloGroup:{
+
+  cardTextGroup: {
     justifyContent: "center",
     alignItems: "center",
     gap: 4,
