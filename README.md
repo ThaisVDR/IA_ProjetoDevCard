@@ -13,8 +13,7 @@ Um app mobile desenvolvida para criar cartões de visita digitais de forma simpl
 
 | 3. Visualização do Cartão | 4. Tela de Sucesso |
 | --- | --- |
-| <img src="https://github.com/user-attachments/assets/f6186fd1-11a9-4722-ac61-0c99fd99d30d" width="300" alt="Visualização prévia do cartão gerado (exemplo Thaís)" /> | <img src="https://github.com/user-attachments/assets/183f926f-95a4-4c07-b38f-8d4c6cf043c8" width="300" alt="Tela final de sucesso na criação do cartão" /> |
-| Visualização prévia do cartão gerado, mostrando os detalhes preenchidos. É possível editar ou finalizar. | Confirmação de que o cartão de visita digital foi criado com sucesso. |
+| <img src="https://github.com/user-attachments/assets/f6186fd1-11a9-4722-ac61-0c99fd99d30d" width="300" alt="Visualização prévia do cartão gerado (exemplo Thaís)" /> | <img src="https://github.com/user-attachments/assets/183f926f-95a4-4c07-b38f-8d4c6cf043c8" width="300" alt="Tela final de sucesso na criação do cartão" /> || Visualização prévia do cartão gerado, mostrando os detalhes preenchidos. É possível editar ou finalizar. | Confirmação de que o cartão de visita digital foi criado com sucesso. |
 
 ## Principais Tecnologias
 
