@@ -1,3 +1,4 @@
+
 ### Aluna: Thaís Vitória Dias Rosa
 ### Turma: 5° Semestre de ENS
 
@@ -10,7 +11,7 @@ Uma aplicação móvel desenvolvida para criar cartões de visita digitais de fo
 
 | 1. Tela de Boas-vindas | 2. Tela de Cadastro |
 | --- | --- |
-| <img src="home.png" width="300" alt="Tela de Boas-vindas" /> | <img src="cadastro.png" width="300" alt="Tela de Cadastro de dados do desenvolvedor" /> |
+| <img width="610" height="1356" alt="Tela de Boas-vindas" src="https://github.com/user-attachments/assets/86535bc4-ebe3-478a-9ccf-48c5eadab4f8" /> | <img width="610" height="1356" alt="Tela de Cadastro de dados do desenvolvedor" src="https://github.com/user-attachments/assets/fa5d28e4-3b3c-4de6-8d47-1e5e4b79969d" />|
 | Apresentação do app com a opção de criar um novo cartão. | Formulário para preenchimento dos dados do desenvolvedor, incluindo nome completo, cargo, experiência e tecnologias. |
 
 | 3. Visualização do Cartão | 4. Tela de Sucesso |
